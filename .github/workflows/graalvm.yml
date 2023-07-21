@@ -11,12 +11,12 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - { CONTEXT: "./ce", PREFIX: "ce", IMAGE: "8" }
-          - { CONTEXT: "./ce", PREFIX: "ce", IMAGE: "11" }
-          - { CONTEXT: "./ce", PREFIX: "ce", IMAGE: "17" }
-          - { CONTEXT: "./ee", PREFIX: "ee", IMAGE: "8" }
-          - { CONTEXT: "./ee", PREFIX: "ee", IMAGE: "11" }
-          - { CONTEXT: "./ee", PREFIX: "ee", IMAGE: "17" }
+          - { CONTEXT: "ce", IMAGE: "8" }
+          - { CONTEXT: "ce", IMAGE: "11" }
+          - { CONTEXT: "ce", IMAGE: "17" }
+          - { CONTEXT: "ee", IMAGE: "8" }
+          - { CONTEXT: "ee", IMAGE: "11" }
+          - { CONTEXT: "ee", IMAGE: "17" }
     steps:
       - uses: actions/checkout@v3
       - uses: docker/setup-qemu-action@v2
@@ -34,8 +34,9 @@ jobs:
       - uses: docker/build-push-action@v4
         with:
           context: ./
-          file: ${{ matrix.tag.CONTEXT }}/${{ matrix.tag.IMAGE }}/Dockerfile
+          file: ./${{ matrix.tag.CONTEXT }}/${{ matrix.tag.IMAGE }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/sersoid/pterodactyl-graalvm:${{ matrix.tag.PREFIX }}-${{ matrix.tag.IMAGE }}
+            sersoid/pterodactyl-graalvm:${{ matrix.tag.CONTEXT }}-${{ matrix.tag.IMAGE }}
+            ghcr.io/sersoid/pterodactyl-graalvm:${{ matrix.tag.CONTEXT }}-${{ matrix.tag.IMAGE }}
