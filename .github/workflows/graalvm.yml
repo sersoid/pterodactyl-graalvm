@@ -38,5 +38,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            sersoid/pterodactyl-graalvm:${{ matrix.tag.CONTEXT }}-${{ matrix.tag.IMAGE }}
             ghcr.io/sersoid/pterodactyl-graalvm:${{ matrix.tag.CONTEXT }}-${{ matrix.tag.IMAGE }}
