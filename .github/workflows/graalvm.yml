@@ -20,7 +20,7 @@ jobs:
           - { CONTEXT: "./ee/jre", PREFIX: "jre-ee", IMAGE: "8" }
           - { CONTEXT: "./ee/jre", PREFIX: "jre-ee", IMAGE: "11" }
           - { CONTEXT: "./ee/jre", PREFIX: "jre-ee", IMAGE: "17" }
-          - { CONTEXT: "./ee/jdk", PREFIX: "jdk-ee", IMAGE: "j8" }
+          - { CONTEXT: "./ee/jdk", PREFIX: "jdk-ee", IMAGE: "8" }
           - { CONTEXT: "./ee/jdk", PREFIX: "jdk-ee", IMAGE: "11" }
           - { CONTEXT: "./ee/jdk", PREFIX: "jdk-ee", IMAGE: "17" }
     steps:

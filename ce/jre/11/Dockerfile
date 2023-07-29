@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:ol9-java11-22.3.2
+FROM ghcr.io/graalvm/graalvm-ce:ol9-java11-22.3.3
 
 LABEL author="Sersoid"
 
