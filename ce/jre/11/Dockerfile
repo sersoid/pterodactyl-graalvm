@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:java8-21.2.0
+FROM ghcr.io/graalvm/graalvm-ce:ol9-java11-22.3.2
 
 LABEL author="Sersoid"
 
@@ -8,5 +8,5 @@ USER container
 ENV USER=container HOME=/home/container
 WORKDIR /home/container
 
-COPY ../../entrypoint.sh /entrypoint.sh
+COPY ../../../entrypoint.sh /entrypoint.sh
 CMD [ "/bin/bash", "/entrypoint.sh" ]
