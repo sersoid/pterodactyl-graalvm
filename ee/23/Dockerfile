@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/jdk:ol7-java8-21
+FROM container-registry.oracle.com/graalvm/jdk:23-ol9
 
 LABEL author="sersoid"
 

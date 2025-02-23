@@ -1,4 +1,4 @@
-FROM container-registry.oracle.com/graalvm/jdk-ee:ol9-java11-22
+FROM container-registry.oracle.com/graalvm/jdk-ee:ol9-java11
 
 LABEL author="sersoid"
 
