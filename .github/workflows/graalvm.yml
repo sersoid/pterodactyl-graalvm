@@ -17,9 +17,14 @@ jobs:
           - { CONTEXT: "./ce", PREFIX: "jdk-ce", IMAGE: "20" }
           - { CONTEXT: "./ce", PREFIX: "jdk-ce", IMAGE: "21" }
           - { CONTEXT: "./ce", PREFIX: "jdk-ce", IMAGE: "22" }
+          - { CONTEXT: "./ce", PREFIX: "jdk-ce", IMAGE: "23" }
           - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "8" }
           - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "11" }
           - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "17" }
+          - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "20" }
+          - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "21" }
+          - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "22" }
+          - { CONTEXT: "./ee", PREFIX: "jdk-ee", IMAGE: "23" }
     steps:
       - uses: actions/checkout@v3
       - uses: docker/setup-qemu-action@v2
